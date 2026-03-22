@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RomeroRide | Transporte Premium</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #0ea5e9;
+  --secondary: #22c55e;
+  --dark: #0f172a;
+  --light: #f1f5f9;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body {
+  background: var(--dark);
+  color: white;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.9)),
+  url('https://images.pexels.com/photos/1736810/pexels-photo-1736810.jpeg');
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h1 {
+  font-size:2.5rem;
+  font-weight:700;
+}
+
+.hero span {
+  color: var(--primary);
+}
+
+.hero p {
+  margin:20px 0;
+  max-width:500px;
+  color:#cbd5f5;
+}
+
+.btn {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  padding:15px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  color:white;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* SECTION */
+section {
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* CARDS */
+.grid {
+  display:grid;
+  gap:20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  padding:20px;
+  border-radius:20px;
+  transition:0.4s;
+  opacity:0;
+  transform:translateY(40px);
+}
+
+.card.visible {
+  opacity:1;
+  transform:translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+/* TESTIMONIOS */
+.testimonial {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  padding:20px;
+  border-radius:15px;
+}
+
+.stars {
+  color: gold;
+}
+
+/* CTA FINAL */
+.cta {
+  text-align:center;
+}
+
+.cta h2 {
+  margin-bottom:20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(min-width:768px){
+  .hero h1 { font-size:4rem; }
+  .grid { grid-template-columns: repeat(3,1fr); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Romero<span>Ride</span></h1>
+  <p>Transporte seguro, puntual y confiable con Eduardo Romero. Muévete sin estrés, llega siempre a tiempo.</p>
+  <a href="https://wa.me/593999999999?text=Hola%20quiero%20un%20traslado" class="btn">
+    Reservar ahora
+  </a>
+</section>
+
+<!-- SERVICIOS -->
+<section>
+  <h2 style="text-align:center; margin-bottom:30px;">Servicios</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🚖 Traslados urbanos</h3>
+      <p>Viajes rápidos dentro de la ciudad con total seguridad.</p>
+    </div>
+    <div class="card">
+      <h3>✈️ Aeropuerto</h3>
+      <p>Puntualidad absoluta en llegadas y salidas.</p>
+    </div>
+    <div class="card">
+      <h3>🛣️ Viajes largos</h3>
+      <p>Comodidad total en trayectos interprovinciales.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section>
+  <h2 style="text-align:center; margin-bottom:30px;">¿Por qué elegir RomeroRide?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>🔒 Seguridad</h3>
+      <p>Conducción profesional y vehículo en excelente estado.</p>
+    </div>
+    <div class="card">
+      <h3>⏱️ Puntualidad</h3>
+      <p>Siempre a tiempo, sin excusas.</p>
+    </div>
+    <div class="card">
+      <h3>⭐ Experiencia premium</h3>
+      <p>Viajes cómodos, limpios y con atención personalizada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section>
+  <h2 style="text-align:center; margin-bottom:30px;">Clientes felices</h2>
+  <div class="grid">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>"El mejor servicio que he usado en Guayaquil. Súper confiable."</p>
+      <strong>- María G.</strong>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>"Llegué al aeropuerto sin estrés. Totalmente recomendado."</p>
+      <strong>- Carlos P.</strong>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p>"Eduardo es puntual y muy profesional. Excelente experiencia."</p>
+      <strong>- Andrea L.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta">
+  <h2>¿Listo para tu próximo viaje?</h2>
+  <a href="https://wa.me/593999999999?text=Hola%20quiero%20reservar%20un%20viaje" class="btn">
+    Contáctame por WhatsApp
+  </a>
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a class="whatsapp" href="https://wa.me/593999999999">💬</a>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+function show() {
+  const trigger = window.innerHeight * 0.85;
+  cards.forEach(c => {
+    if(c.getBoundingClientRect().top < trigger){
+      c.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', show);
+show();
+</script>
+
+</body>
+</html>
